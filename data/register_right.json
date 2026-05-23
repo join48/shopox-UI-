@@ -1,0 +1,8 @@
+[
+  {
+    "title": "账号和密码正确",
+    "phone": "AUTO_PHONE",
+    "password": "123456",
+    "expect": "，欢迎来到"
+  }
+]
