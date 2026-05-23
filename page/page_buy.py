@@ -5,34 +5,8 @@
 import time
 from base.base import BasePage
 from config import BASE_URL
-from tools import DriverTools
 from selenium.webdriver.common.by import By
 
-# class PageBuy(BasePage):
-#     """购买页面类"""
-#
-#     def __init__(self, driver):
-#         """初始化方法"""
-#         super().__init__(driver)
-#         # 设置页面实例属性
-#         self.category_main = (By.CLASS_NAME, "span[value='时尚服饰']")
-#         self.category_sub = (By.XPATH, "//*[text()='男装']")
-#         self.product = (By.LINK_TEXT, "南极人（Nanjiren）裤子夏季男宽松休闲百搭裤华夫格长裤运动裤子潮流束脚裤休闲裤男")
-#         self.color =(By.CLASS_NAME, "span[value='粉色']")
-#         self.size = (By.CLASS_NAME, "span[value='S+S']")
-#         self.buy_button = (By.CLASS_NAME, "button[value='立即购买']")
-#         self.add_adress = (By.CLASS_NAME, "button[value='添加新地址']")
-#         self.adress_name = (By.CLASS_NAME, "input[name='name']")
-#         self.adress_alias = (By.CLASS_NAME, "input[name='alias']")
-#         self.adress_phone = (By.CLASS_NAME, "input[name='tel']")
-#         self.adress_province = (By.XPATH, "/html/body/div[1]/div[1]/div/form/div[4]/div/div[1]/div[1]/span")
-#         self.adress_city1 = (By.CLASS_NAME, "span[value='北京市']")
-#         self.adress_city2 = (By.CLASS_NAME, "span[value='北京市']")
-#         self.adress_district = (By.CLASS_NAME, "span[value='东城区']")
-#         self.adress_street = (By.CLASS_NAME, "input[placeholder='地区编号']")
-#         self.adress_detail = (By.CLASS_NAME, "input[name='address']")
-#         self.adress_defult = (By.XPATH, "/html/body/div[1]/div[1]/div/form/div[6]/div")
-#         self.adress_savebutton = (By.CLASS_NAME, "span[value='保存']")# ... existing code ...
 
 class PageBuy(BasePage):
     """购买页面类"""
@@ -95,19 +69,11 @@ class PageBuy(BasePage):
         """保存地址"""
         self.base_click(self.address_save_button)
 
-# ... existing code ...
-if __name__ == '__main__':
+    def open_url(self):
+        """打开网页"""
+        self.driver.get(BASE_URL)
 
-    page = PageBuy(DriverTools.get_driver())
-    page.open(BASE_URL)
-    page.select_category("时尚服饰", "男装")
-    page.select_product()
-    page.select_specifications("粉色", "S+S")
-    page.click_buy()
-    page.fill_address("张三", "家", "13800000000")
-    page.save_address()
-    time.sleep(5)
-    DriverTools.get_driver().quit()
+
 
 
 

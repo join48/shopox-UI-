@@ -48,9 +48,15 @@ class PageRegister(BasePage):
         self.base_input(self.captcha_inputElement, shot)
         #点击 同意协议
         self.base_click(self.agreement_checkboxElement)
+        # 点击 注册
         self.base_click(self.register_buttonElement)
         time.sleep(2)
-
+    def get_captcha_img(self, loc):
+        """获取图片验证码"""
+        captcha_img = self.fd_element(loc)#定位图片验证码元素
+        img_bytes = captcha_img.screenshot_as_png#获取图片字节码
+        captcha_code = self.ocr.classification(img_bytes)#识别图片字节码，产出验证码
+        return captcha_code
 
     def get_success_result(self):
         """获取注册成功信息"""

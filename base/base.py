@@ -14,7 +14,7 @@ class BasePage(object):
 
     def __init__(self, driver, timeout=10):
         # 获取浏览器对象
-        self.driver = driver  # 相当于：self.driver = DriverTools.get_driver()
+        self.driver = driver
         self.default_timeout = timeout  # 默认等待时间
         # 抑制ddddocr的欢迎信息
         import io
