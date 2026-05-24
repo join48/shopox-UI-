@@ -1,25 +1,25 @@
 [
   {
     "type": "账号为空",
-    "phone": "",
+    "account": "",
     "password": "123456",
     "expect": "欢迎登录"
   },
   {
     "type": "密码为空",
-    "phone": "123456",
+    "account": "123456",
     "password": "",
     "expect": "欢迎登录"
   },
   {
     "type": "账号不存在",
-    "phone": "123456",
+    "account": "123456",
     "password": "123456",
     "expect": "欢迎登录"
   },
   {
     "type": "密码错误",
-    "phone": "18400099090",
+    "account": "18400099090",
     "password": "12356",
     "expect": "欢迎登录"
   }

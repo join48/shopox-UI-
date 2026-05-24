@@ -35,6 +35,14 @@ def gen_mobile():
     suffix = str(int(time.time() * 1000))[-8:]
     return prefix + suffix
 
+def gen_account(length=11):
+    """生成指定长度的随机数字账号（首位非零）"""
+    if length <= 0:
+        return ""
+    first = str(random.randint(1, 9))
+    rest = ''.join([str(random.randint(0, 9)) for _ in range(length - 1)])
+    return first + rest
+
 class GetLog:
     """日志管理器（单例）"""
     __log = None

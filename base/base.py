@@ -5,7 +5,7 @@ from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver import ActionChains
-from tools import GetLog
+from utils.tools import GetLog
 
 # 在模块级别设置环境变量，禁用ddddocr欢迎信息
 os.environ['PYTHONWARNINGS'] = 'ignore'

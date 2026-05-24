@@ -1,3 +1,3 @@
-from tools import GetLog
+from utils.tools import GetLog
 
 log=GetLog.get_log()

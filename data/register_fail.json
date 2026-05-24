@@ -1,0 +1,98 @@
+[
+  {
+    "title": "密码为空",
+    "account": "18400099092",
+    "password": "",
+    "captcha_mode": "input",
+    "skip_agreement": false,
+    "expect": "欢迎注册"
+  },
+  {
+    "title": "密码格式错误",
+    "account": "1840009#091",
+    "password": "123456",
+    "captcha_mode": "input",
+    "skip_agreement": false,
+    "expect": "欢迎注册"
+  },
+  {
+    "title": "密码长度为5",
+    "account": "18400",
+    "password": "123",
+    "captcha_mode": "input",
+    "skip_agreement": false,
+    "expect": "欢迎注册"
+  },
+  {
+    "title": "密码长度为19",
+    "account": "1840909273648293847",
+    "password": "123456789012345678901234567890",
+    "captcha_mode": "input",
+    "skip_agreement": false,
+    "expect": "欢迎注册"
+  },
+  {
+    "title": "账号为空",
+    "account": "",
+    "password": "123456",
+    "captcha_mode": "input",
+    "skip_agreement": false,
+    "expect": "欢迎注册"
+  },
+  {
+    "title": "账号已注册",
+    "account": "18400099090",
+    "password": "123456",
+    "captcha_mode": "input",
+    "skip_agreement": false,
+    "expect": "欢迎注册"
+  },
+  {
+    "title": "账号格式错误",
+    "account": "1840009#091",
+    "password": "123456",
+    "captcha_mode": "input",
+    "skip_agreement": false,
+    "expect": "欢迎注册"
+  },
+  {
+    "title": "账号长度为1",
+    "account": "s",
+    "password": "123456",
+    "captcha_mode": "input",
+    "skip_agreement": false,
+    "expect": "欢迎注册"
+  },
+  {
+    "title": "账号长度为19",
+    "account": "1092348761342637485",
+    "password": "123456",
+    "captcha_mode": "input",
+    "skip_agreement": false,
+    "expect": "欢迎注册"
+  },
+  {
+    "title": "不勾选用户同意选项",
+    "account": "18400099092",
+    "password": "123456",
+    "captcha_mode": "input",
+    "skip_agreement": true,
+    "expect": "欢迎注册"
+  },
+  {
+    "title": "不填写图片验证码",
+    "account": "18400099092",
+    "password": "123456",
+    "captcha_mode": "skip",
+    "skip_agreement": false,
+    "expect": "欢迎注册"
+  },
+  {
+    "title": "图片验证码错误",
+    "account": "18400099092",
+    "password": "123456",
+    "captcha_mode": "error",
+    "skip_agreement": false,
+    "expect": "欢迎注册"
+  }
+]

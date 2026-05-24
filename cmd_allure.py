@@ -1,7 +1,6 @@
 # 1.导包
 import os
-
-# 2.配置cmd下执行命令（生成allure执行命令）
+# 2.配置cmd下执行命令（生成allure执行命令）（本地执行allure）
 run_cmd = "allure generate ./report -o ./report/allure_report --clean"
 # 通过os.system(命令)方法运行终端命令（相当于在终端运行上述命令）
 os.system(run_cmd)
