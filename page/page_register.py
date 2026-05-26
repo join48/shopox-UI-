@@ -30,7 +30,7 @@ class PageRegister(BasePage):
             By.XPATH,"/html/body/div[1]/div[1]/div[3]/div/div/div[2]/div/div[1]/div[1]/form/div[5]/button"
         )
         # 成功结果元素定位
-        self.success_result =(By.XPATH, "//*[contains(text(), '欢迎来到')]")
+        self.success_result =(By.XPATH, "//*[contains(text(), '，欢迎来到')]")
         # 失败结果元素定位 #reg_form > div.reg-title
         self.fail_result = (By.XPATH, "//*[contains(text(), '欢迎注册')]")
 

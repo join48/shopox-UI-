@@ -42,6 +42,13 @@ class TestRegister:
                 account = gen_account(length)
             else:
                 account = gen_mobile()
+        if password == "AUTO_ACCOUNT":
+            match = re.search(r'密码长度为(\d+)', title)
+            if match:
+                length = int(match.group(1))
+                password = gen_account(length)
+            else:
+                password = "1234567"
         self.page.register(account, password)
         result = self.page.get_success_result()
         log.debug(f"测试用例：{title} | 注册结果: {result} | 期望值: {expect}")
